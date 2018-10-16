@@ -1,0 +1,27 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf100
+{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fmodern\fcharset0 Courier;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\fs24 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 CC = gcc\
+CFLAGS = -Wall\
+\
+OBJ = linked_list .o use_linked_list.o\
+\
+all : use_linked_list\
+\
+use_linked_list : $(OBJ)\
+		   $(CC)  $(CFLAGS) -o use_linked_list $( OBJ )\
+\
+use_linked_list.o: linked_list.h use_linked_list . c\
+\
+linked_list.o: linked_list.h linked_list.c\
+\
+clean :\
+	rm -f use_linked_list *.o
+\f1 \cf2 \outl0\strokewidth0 \
+}
